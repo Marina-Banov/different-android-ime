@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rootview">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6">
+
+        <ImageButton
+            android:id="@+id/button_consonant_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_caret_up_solid"
+            app:layout_constraintEnd_toEndOf="@+id/button_consonant_check"
+            app:layout_constraintStart_toStartOf="@+id/button_consonant_check"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/button_consonant_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_check_solid"
+            app:layout_constraintBottom_toTopOf="@+id/button_consonant_down"
+            app:layout_constraintEnd_toStartOf="@+id/button_consonant_right"
+            app:layout_constraintTop_toBottomOf="@+id/button_consonant_up" />
+
+        <ImageButton
+            android:id="@+id/button_consonant_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_caret_down_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button_consonant_check"
+            app:layout_constraintStart_toStartOf="@+id/button_consonant_check" />
+
+        <ImageButton
+            android:id="@+id/button_consonant_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_caret_left_solid"
+            app:layout_constraintEnd_toStartOf="@+id/button_consonant_check"
+            app:layout_constraintTop_toTopOf="@+id/button_consonant_check" />
+
+        <ImageButton
+            android:id="@+id/button_consonant_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_caret_right_solid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_consonant_check" />
+
+        <TextView
+            android:id="@+id/textView_consonant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_consonant_left"
+            app:layout_constraintEnd_toStartOf="@+id/button_consonant_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_consonant_left"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:tint="#000000"
+            app:layout_constraintStart_toEndOf="@+id/button_consonant_up"
+            app:layout_constraintTop_toTopOf="@+id/button_consonant_up"
+            android:src="@android:drawable/ic_input_delete" />
+
+        <Button
+            android:id="@+id/button_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="_"
+            android:textColor="@color/black"
+            app:backgroundTint="#DCDCDC"
+            app:layout_constraintBottom_toBottomOf="@+id/button_consonant_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_consonant_down"
+            app:layout_constraintTop_toTopOf="@+id/button_consonant_down" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4">
+
+        <TextView
+            android:id="@+id/textView_vowel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_vowel_slide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_vowel_slide"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_vowel_slide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black"
+            app:backgroundTint="#DCDCDC"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/button_vowel_check"
+            app:layout_constraintEnd_toStartOf="@+id/button_vowel_check"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView_vowel"
+            app:layout_constraintTop_toTopOf="@+id/button_vowel_check" />
+
+        <ImageButton
+            android:id="@+id/button_vowel_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_check_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
